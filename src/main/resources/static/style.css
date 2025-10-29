@@ -1,0 +1,133 @@
+/* --- Variables de Color --- */
+:root {
+    --color-azul-lions: #004A99;
+    --color-amarillo-lions: #FDB813;
+    --color-fondo: #FFFFFF;
+    --color-texto-principal: #333333; 
+    --color-texto-secundario: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header-principal {
+    background-color: var(--color-fondo);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--color-azul-lions);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-principal .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 85px;
+    width: auto;
+}
+
+.menu-navegacion {
+    display: flex;
+    align-items: center;
+}
+
+.menu-principal {
+    list-style: none;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: var(--color-azul-lions);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.2rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+    color: var(--color-amarillo-lions);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-fondo);
+    border: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.con-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    padding: 0.8rem 1rem;
+    color: var(--color-texto-principal);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: var(--color-amarillo-lions);
+    color: var(--color-azul-lions);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+}
+
+.hero h1 {
+    color: var(--color-azul-lions);
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: var(--color-azul-lions);
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
